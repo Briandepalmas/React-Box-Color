@@ -11,15 +11,19 @@ export class App extends Component {
                   toggleOn:false
 
              }
+             //binds the function so it can be clicked on button
         this.handleChangeColor=this.handleChangeColor.bind(this)
         
       }
   
-  
+  //function that changes all propertire color clickcounter and toggle.
     handleChangeColor(){
+      // the ! toggles the 'toggleOn' property between true or false everytime handleChangecolor os called onClick
       this.setState(toggleSwitch => ({toggleOn: !toggleSwitch.toggleOn}));
+     //Adds one to property clickcounter everytime handlechangecolor is clicked
       this.setState({clickCounter: this.state.clickCounter+1})
       
+      //when toggle is not on or false the propety color is red and when true is green.
       if (this.state.toggleOn==false){
         this.setState({color:'red'})
       }
@@ -44,36 +48,3 @@ export class App extends Component {
 
 export default App
 
-// import React from 'react';
-// import './App.css';
-
-// import React, { Component } from 'react'
-
-// export default class App extends Component {
-//   constructor(props){
-//     super(props);
-
-//     this.state={
-//       color:'blue',
-//       clickCounter:0
-//     }
-//   }
-
-//   onChange =(e)=>{
-//     this.setState({color:'orange',
-//   clickCounter: this.state.clickCounter++
-// })
-
-//   }
-  
-//   render() {
-//     return (
-//       <div className="App">
-//         <h1>Box color change</h1>
-//         <div className="colorBox" style={{backgroundColor=this.state.color}}>
-//           <p>Click Me</p>
-//         </div>
-//       </div>
-//     )
-//   }
-// }
