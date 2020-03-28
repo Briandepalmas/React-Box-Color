@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap');
+
 body{
     background-color: rgb(166, 167, 166);
 }
@@ -14,10 +17,14 @@ body{
     
 }
 #title1{
+    font-family: 'Spicy Rice', cursive;
+    color:darkgreen;
     margin-left: 35vw;
     background-color: gold;
 }
 #title2{
+    font-family: 'Spicy Rice', cursive;
+    color:royalblue;
     margin-left: 35vw;
     background-color: gold;
 }
