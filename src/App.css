@@ -1,6 +1,23 @@
+body{
+    background-color: rgb(166, 167, 166);
+}
 .colorbox{
     height:200px;
     width:200px;
     margin-left: 35vw;
     margin-top: 13vh;
+}
+.p{
+    font-size: 30px;
+    color:white;
+    text-align: center;
+    
+}
+#title1{
+    margin-left: 35vw;
+    background-color: gold;
+}
+#title2{
+    margin-left: 35vw;
+    background-color: gold;
 }

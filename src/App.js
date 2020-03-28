@@ -12,25 +12,30 @@ export class App extends Component {
 
              }
         this.handleChangeColor=this.handleChangeColor.bind(this)
+        
       }
   
   
     handleChangeColor(){
       this.setState(toggleSwitch => ({toggleOn: !toggleSwitch.toggleOn}));
-      this.setState({clickCounter: this.state.clickCounter++})
+      this.setState({clickCounter: this.state.clickCounter+1})
+      
       if (this.state.toggleOn==false){
-        this.setState({color:'red',
-                      })
+        this.setState({color:'red'})
+      }
+      else{
+        this.setState({color:'green'})
       }
          
-        }
+ }
   
   render() {
     return (
       <div>
-        <h1>Box color change</h1>
+        <h1 id="title1">Box color change</h1>
+        <h1 id="title2">ClickCounter: {this.state.clickCounter}</h1>
         <div onClick={this.handleChangeColor} className="colorbox" style={{backgroundColor:this.state.color}}>
-          <p >Click Me</p>         
+          <p className="p">Click Me</p>         
         </div>
       </div>
     )
